@@ -16,8 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from fairshare_backend.views import new_endpoint
+from fairshare_backend.views import create_entry
+from fairshare_backend.views import get_blogs
+from fairshare_backend.views import get_users
 
 urlpatterns = [
     path('', include("fairshare_backend.urls")),
     path('admin/', admin.site.urls),
+    path('new_endpoint/', new_endpoint),
+    path('create_entry/', create_entry),
+    path('get_blogs/', get_blogs),
+    path('get_users/', get_users),
 ]
